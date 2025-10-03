@@ -53,12 +53,23 @@ Route::view('/about', 'about');
 //     return $num1 + $num2;
 // })->whereNumber(['num1', 'num2']);
 
+/// CONTROLLERS
+// Route::get('/car',[CarController::class,'index']);
+// Route::controller(CarController::class)->group(function(){
+//     Route::get('/car', 'index');
+//     Route::get('/my-cars', 'myCars');
+//  });
+// Route::get('/car/invokable', CarController::class);
+// Route::get('/car', [CarController::class, 'index']);
 
+// Route::resource("/products", ProductController::class)->only(['index','show']);
+// Route::resource("/products", ProductController::class);
+// Route::apiResource("/products", ProductController::class);
 
-
-
-
-
+// Route::apiResources([
+//     'cars' => CarController::class,
+//     'products' => ProductController::class]
+//     );
 
 Route::fallback(function () {
     return 'fallback';
