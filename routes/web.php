@@ -71,6 +71,8 @@ Route::view('/about', 'about');
 //     'products' => ProductController::class]
 //     );
 
+
+/// fallback route if the route does not exist
 Route::fallback(function () {
     return 'fallback';
 });
