@@ -72,7 +72,7 @@ Route::view('/about', 'about');
 //     );
 
 
-/// fallback route if the route does not exist
+/// fallback route if the route does not exists
 Route::fallback(function () {
     return 'fallback';
 });
