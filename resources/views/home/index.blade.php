@@ -1,3 +1,4 @@
+{{-- this will extends the app layout --}}
 @extends('layouts.app')
 
 @section('title', 'Home Page')
