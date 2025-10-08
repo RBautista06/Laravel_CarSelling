@@ -10,7 +10,8 @@ class HomeController extends Controller
     public function index(){
         return view("home.index", [
             'name' => 'Railley',
-            'surname' => 'Bautista'
+            'surname' => 'Bautista',
+            'hobbies' => ['Tennis', 'Fishing']
         ]);
     }
 }
