@@ -30,7 +30,7 @@
     <!-- <link rel="stylesheet" href="css/output.css" /> -->
   </head>
 
-  <body>
+  <body @isset($cssClass)class="{{ $cssClass }}"@endisset>
     {{-- this will output the childContent right here --}}
     @yield('childContent')
 

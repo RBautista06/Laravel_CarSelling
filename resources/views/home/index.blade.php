@@ -3,6 +3,8 @@
 
 @section('title', 'Home Page')
 
+{{-- content of the index --}}
+
 @section('content')
     <!-- Home Slider -->
     <section class="hero-slider">
