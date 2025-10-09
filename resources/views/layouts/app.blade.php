@@ -5,6 +5,11 @@
         @include('layouts.partials.header')
             {{-- main content will be rendered here --}}
             @yield('content')
-        {{-- insert the footer component --}}
-        @include('layouts.partials.footer')
+        {{-- this will check if there is a footerLinks passed --}}
+        @hasSection('footerLinks')
+            <footer>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+            </footer>
+        @endif
     @endsection
