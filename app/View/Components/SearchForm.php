@@ -11,9 +11,13 @@ class SearchForm extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+
+    public function __construct(
+        public string $action = '/search',
+        public string $method = 'GET'
+    )
     {
-        //
+
     }
 
     /**
@@ -22,5 +26,9 @@ class SearchForm extends Component
     public function render(): View|Closure|string
     {
         return view('components.search-form');
+    }
+
+    public function test() {
+        return 'something';
     }
 }
