@@ -667,12 +667,11 @@
     <!--/ New Cars -->
   </main>
 
-  @section('footerLinks')
-    {{-- this @parent will let you not override the link1 and link2 in the app.blade.php like it will just add it --}}
-    @parent
+  <x-slot:footerLinks>
     <a href="#">Link 3</a>
     <a href="#">Link 4</a>
-  @endsection
+  </x-slot:footerLinks>
+
 </x-app-layout>
 
 
