@@ -1,3 +1,5 @@
+{{-- this is the pages that has footer and header --}}
+
 @props([
     'title' => '',
     'footerLinks' => ''
