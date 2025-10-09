@@ -1,11 +1,4 @@
-{{-- this will extends the app layout --}}
-@extends('layouts.app')
-
-@section('title', 'Home Page')
-
-{{-- content of the index --}}
-
-@section('content')
+<x-app-layout title="Home Page">
   @php
     $color = 'red';
     $bgColor = 'blue'
@@ -673,11 +666,13 @@
     </section>
     <!--/ New Cars -->
   </main>
+
   @section('footerLinks')
     {{-- this @parent will let you not override the link1 and link2 in the app.blade.php like it will just add it --}}
     @parent
     <a href="#">Link 3</a>
     <a href="#">Link 4</a>
   @endsection
+</x-app-layout>
 
-@endsection
+
