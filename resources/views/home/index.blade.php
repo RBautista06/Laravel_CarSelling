@@ -6,8 +6,13 @@
 {{-- content of the index --}}
 
 @section('content')
-  <x-card>
-    <x-slot:title> Card Title 1</x-slot>
+  @php
+    $color = 'red';
+    $bgColor = 'blue'
+  @endphp
+
+  <x-card :$color :$bgColor class="card-rounded">
+    <x-slot:title class="card-header-blue"> Card Title 1</x-slot>
     Card Content 1
     <x-slot:footer> Card Footer 1</x-slot>
   </x-card>
