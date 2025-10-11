@@ -8,5 +8,5 @@ class CarType extends Model
 {
     //
     public $timestamps = false;
-
+    protected $fillable = ['name'];
 }
