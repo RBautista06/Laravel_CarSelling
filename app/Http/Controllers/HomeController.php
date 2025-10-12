@@ -18,7 +18,7 @@ class HomeController extends Controller
         //     'model_id' => 1,
         //     'year' => 2000,
         //     'price' => 10,
-        //     'vin' => '10101010',
+        //     'vin' => '1',
         //     'mileage' => 1,
         //     'car_type_id' => 1,
         //     'fuel_type_id' => 1,
@@ -60,7 +60,6 @@ class HomeController extends Controller
         //     ->where('user_id',1)
         //     ->delete();
 
-        Car::truncate();
 
         return view("home.index");
     }
