@@ -7,18 +7,18 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
     public function index(){
         // $cars  = Car::get();
         // $cars = Car::where("published_at",'!=',null)->get();\
         // dump($cars);
 
+        /// example for inserting data to db
         // $carData = [
         //     'maker_id' => 1,
         //     'model_id' => 1,
         //     'year' => 2000,
         //     'price' => 10,
-        //     'vin' => '222',
+        //     'vin' => '10101010',
         //     'mileage' => 1,
         //     'car_type_id' => 1,
         //     'fuel_type_id' => 1,
@@ -32,6 +32,21 @@ class HomeController extends Controller
 
         // $car3 = new Car($carData);
         // $car3->save();
+
+        // $car = Car::find(1);
+        // $car->price = 50000;
+        // $car->save();
+
+        // Single Update
+        // $car = Car::updateOrCreate(
+        //     ['vin' => '10', 'price' => 50000],
+        //     $carData);
+        // dump($car);
+
+        // Mass update
+        // $car = Car::where('published_at', null)
+        //             ->where('user_id', 1)
+        //             ->update(['published_at'=> now()]);
 
         return view("home.index");
     }

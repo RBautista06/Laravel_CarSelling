@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CarFeatures extends Model
 {
+    protected $primaryKey = 'car_id'; // making this the primary key
     protected $fillable = [
         'car_id',
         'abs',
@@ -21,6 +22,5 @@ class CarFeatures extends Model
         'rear_parking_sensors',
         'leather_seats',
     ];
-
     public $timestamps = false;
 }
