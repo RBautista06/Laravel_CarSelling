@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index(){
         // $cars  = Car::get();
-        // $cars = Car::where("published_at",'!=',null)->get();\
+        // $cars = Car::where("published_at",'!=',null)->get();
         // dump($cars);
 
         /// example for inserting data to db
@@ -47,6 +47,20 @@ class HomeController extends Controller
         // $car = Car::where('published_at', null)
         //             ->where('user_id', 1)
         //             ->update(['published_at'=> now()]);
+
+        // single delete
+        // $car = Car::find(1);
+        // $car->delete();
+
+        // MassDelete
+        // $car = Car::destroy([2,3]);
+
+        // delete with Condition
+        // Car::where('published_at', null)
+        //     ->where('user_id',1)
+        //     ->delete();
+
+        Car::truncate();
 
         return view("home.index");
     }
