@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CarFeatures extends Model
 {
@@ -23,4 +24,8 @@ class CarFeatures extends Model
         'leather_seats',
     ];
     public $timestamps = false;
+
+    public function car(): BelongsTo{
+        return $this->belongsTo(Car::class);
+    }
 }
