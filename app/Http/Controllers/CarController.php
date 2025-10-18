@@ -80,4 +80,10 @@ class CarController extends Controller
 
         return view('car.search', ['cars' => $cars, 'carCount' => $carCount]);
     }
+
+    public function watchlist() {
+        // TODO: we come back to this
+        $cars= User::find(4)->favouriteCars;
+        return view('car.watchlist', ['cars' => $cars]);
+    }
 }
