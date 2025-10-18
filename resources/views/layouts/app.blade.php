@@ -2,9 +2,10 @@
 
 @props([
     'title' => '',
+    'bodyClass' => null,
 ])
 
-<x-base-layout :$title>
+<x-base-layout :$title :$bodyClass>
     <x-layouts.header />
 
     {{ $slot }}
